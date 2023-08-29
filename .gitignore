@@ -1,0 +1,6 @@
+obj 
+bin
+.vscode
+
+# dependencies
+/node_modules

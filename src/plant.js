@@ -1,14 +1,24 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../css/styles.css";
+import "./css/styles.css";
 
-const plantState = () => {
+const plantStore = () => {
   let plantName = {}
   return (gardenStateFunction) => {
-    const newState = gardenStateFunction(plantState);
+    const newStore = gardenStateFunction(plantStore);
     plantName = {}
-    return newState;
+    return newStore;
   }
 }
 
-const plantControl = plantState();
+const plantControl = plantStore();
+const changeStore = (place) => {
+  return (value) => {
+    return (store) => ({
+      store, [place]: (store[place] || 0) + value
+    })
+  }
+}
+
+const feed = changeStore ("soil")(1);
+const hydrate = changeStore("water")(1);

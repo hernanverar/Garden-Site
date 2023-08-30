@@ -1,14 +1,16 @@
 body {
-  text-align: center;
-  font-size: larger;
-  background-color: aquamarine;
+  background-color: rgb(136, 252, 221);
+}
+
+h1 {
+  background-color: rgb(238, 128, 167);
 }
 
 .poison-card {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  background-color: #F0F465;
-  border-radius: 20px;
+  width: 20%;
+  background-color: #93ef5d;
+  border-radius: 10px;
   padding: 14px;
 } 

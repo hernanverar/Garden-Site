@@ -1,24 +1,32 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./css/styles.css";
+import { changeState, storeState } from './business.js';
 
-const plantStore = () => {
-  let plantName = {}
-  return (gardenStateFunction) => {
-    const newStore = gardenStateFunction(plantStore);
-    plantName = {}
-    return newStore;
+
+// const feed = changeState ("leaf")(3);
+const plant = changeState("oil")(5);
+
+
+
+const feedPlant = (name) => {
+const plant = {name: name };
+  return  {
+  ...poison,
+  ...damage(plant),
+  ...beauty(plant)
   }
 }
 
-const plantControl = plantStore();
-const changeStore = (place) => {
-  return (value) => {
-    return (store) => ({
-      store, [place]: (store[place] || 0) + value
-    })
-  }
-}
+const deathFlower = (name) => {
+  const poison = {name: name };
+    return  {
+    ...poison,
+    ...damage(plant),
+    ...beauty(plant)
+    };
+  };
 
-const feed = changeStore ("soil")(1);
-const hydrate = changeStore("water")(1);
+
+  const deathFlower = feedPlant("Death Flower");
+
+  export const deathFlowerControl = storeState(dragonFlower);
+
+ 

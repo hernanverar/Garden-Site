@@ -3,3 +3,12 @@ body {
   font-size: larger;
   background-color: aquamarine;
 }
+
+.dragon-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #F0F465;
+  border-radius: 20px;
+  padding: 14px;
+} 

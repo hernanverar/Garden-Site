@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript" src="js/plant.js"></script>
-    <title>Garden Plants app</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden and Plants Game</title>
+
   </head>
   <body>
-    <h1>Everything for your Garden you will find it here!!</h1>
+
+    <div class="main">
+
+    <h1>Everything for your Garden you will find it here but be aware of the danger!!</h1>
+
     <form id="Plants-form">
       <label for="plants-name">Enter Plant name</label>
       <input type="text">
       <button type="submit">Submit</button>
+      <div id="all-values-hm"></div>
       <br>
       <br>
-      <label for="soil-value">Add soil</label>
-      <input type="text">
-      <button type="submit">Submit</button>
+
+      <div class="poisons">
+        <div class="plant-card">
+          <h3>death flower</h3>
+          <button id="show-hm">Death flower Damage</button>
+          <div id="all-values"></div>
+        </div>
+      </div>
+
+    
     </form>
-    <div id="soil-value"></div>
   </body>
   </html>

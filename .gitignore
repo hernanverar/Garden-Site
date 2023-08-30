@@ -1,6 +1,8 @@
 obj 
 bin
 .vscode
+coverage/
+dist/ 
 
 # dependencies
 /node_modules
